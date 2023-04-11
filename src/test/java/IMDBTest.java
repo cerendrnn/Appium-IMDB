@@ -36,7 +36,7 @@ public class IMDBTest {
         driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), caps);
     }
 
-    public void closeDialogTapSearch()throws InterruptedException{
+    public void closeDialogTapSearch(){
 
         //2 cases in this assignment has closing dialog and tapping search icon scenarios.
         //For code readability, this function covers these 2 scenarios.
@@ -50,7 +50,7 @@ public class IMDBTest {
     }
 
 
-    public void search(String s) throws InterruptedException{
+    public void search(String s){
 
         //function for writing parameter on search bar.
         AndroidElement search_bar = (AndroidElement) driver.findElement(By.id("com.imdb.mobile:id/search_src_text"));
@@ -59,7 +59,7 @@ public class IMDBTest {
         search_bar.sendKeys(s);
     }
 
-    public void tapTop250Movies()throws InterruptedException{
+    public void tapTop250Movies(){
 
         //function for tapping top 250 movies section.
         AndroidElement element = (AndroidElement) driver.findElement(By.xpath("//*[@text='" + "Top 250 movies" + "']"));
@@ -67,7 +67,7 @@ public class IMDBTest {
         element.click();
     }
 
-    public void tapSortByIMDBRating()throws InterruptedException{
+    public void tapSortByIMDBRating(){
         //function for tapping "sort by IMDB rating"
         AndroidElement element1 = (AndroidElement) driver.findElement(By.id("com.imdb.mobile:id/refine_button"));
         waitElement(element1);
@@ -80,7 +80,7 @@ public class IMDBTest {
         element3.click();
     }
 
-    public void tapNumberOfRatings() throws InterruptedException{
+    public void tapNumberOfRatings(){
 
         //function for tapping number of ratings
         AndroidElement element = (AndroidElement) driver.findElement(By.xpath("//*[@text='" + "Number of ratings" + "']"));
