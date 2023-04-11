@@ -46,7 +46,7 @@ public class IMDBTest {
         AndroidElement search_icon = (AndroidElement) driver.findElementByXPath("//android.widget.FrameLayout[@content-desc=\"Search\"]/android.widget.ImageView");
         waitElement(search_icon);
         search_icon.click();
-        //Thread.sleep(9000);
+
     }
 
 
@@ -54,17 +54,14 @@ public class IMDBTest {
 
         //function for writing parameter on search bar.
         AndroidElement search_bar = (AndroidElement) driver.findElement(By.id("com.imdb.mobile:id/search_src_text"));
-        //Thread.sleep(5000);
         waitElement(search_bar);
         search_bar.click();
         search_bar.sendKeys(s);
-        //Thread.sleep(9000);
     }
 
     public void tapTop250Movies()throws InterruptedException{
 
         //function for tapping top 250 movies section.
-        //Thread.sleep(9000);
         AndroidElement element = (AndroidElement) driver.findElement(By.xpath("//*[@text='" + "Top 250 movies" + "']"));
         waitElement(element);
         element.click();
@@ -75,15 +72,12 @@ public class IMDBTest {
         AndroidElement element1 = (AndroidElement) driver.findElement(By.id("com.imdb.mobile:id/refine_button"));
         waitElement(element1);
         element1.click();
-        //Thread.sleep(4000);
         AndroidElement element2 = (AndroidElement) driver.findElement(By.id("com.imdb.mobile:id/refinements"));
         waitElement(element2);
         element2.click();
-        //Thread.sleep(9000);
         AndroidElement element3 = (AndroidElement) driver.findElement(By.xpath("//*[@text='" + "IMDb rating" + "']"));
         waitElement(element3);
         element3.click();
-        //Thread.sleep(4000);
     }
 
     public void tapNumberOfRatings() throws InterruptedException{
@@ -92,7 +86,6 @@ public class IMDBTest {
         AndroidElement element = (AndroidElement) driver.findElement(By.xpath("//*[@text='" + "Number of ratings" + "']"));
         waitElement(element);
         element.click();
-        //Thread.sleep(4000);
     }
 
     public void waitElement(WebElement element){
